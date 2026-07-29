@@ -1,0 +1,151 @@
+/* ===========================
+   CRUD PAGE
+=========================== */
+
+.crud-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c7744);
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px 20px;
+}
+
+.crud-container{
+    width:100%;
+    max-width:1300px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.crud-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.crud-header h1{
+    color:#D4AF37;
+    font-size:34px;
+    margin-bottom:5px;
+}
+
+.crud-header p{
+    color:#d7d7d7;
+}
+
+.back-btn{
+    padding:13px 24px;
+    border-radius:12px;
+    background:#D4AF37;
+    color:#163528;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+}
+
+/* ===========================
+   FORM CARD
+=========================== */
+
+.form-card{
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:30px;
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+}
+
+.form-card form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.form-card input{
+    padding:15px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.10);
+    color:white;
+    font-size:15px;
+}
+
+.form-card input::placeholder{
+    color:#d8d8d8;
+}
+
+.form-card input:focus{
+    border-color:#D4AF37;
+}
+
+/* ===========================
+   SUBMIT BUTTON
+=========================== */
+
+.form-card button[type="submit"]{
+    grid-column:1/-1;
+    padding:15px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#D4AF37,#f5d66b);
+    color:#163528;
+    font-weight:700;
+    font-size:16px;
+    transition:.3s;
+}
+
+.form-card button[type="submit"]:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+}
+
+/* ===========================
+   TABLE CARD
+=========================== */
+
+.table-card{
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+}
+
+/* Search */
+
+.table-card .search-input{
+    margin-bottom:20px;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+    .crud-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .back-btn{
+        width:100%;
+    }
+
+    .form-card form{
+        grid-template-columns:1fr;
+    }
+
+}
